@@ -106,9 +106,9 @@ class App extends Component {
               name="question"
               placeholder="Type a question here!"
               value={this.state.question}
-              onChange={(e) => this.handleChange(e)}
+              onChange={this.handleChange}
                />
-            <input type="submit" className="btn-submit" value="Submit" onClick={(e) => this.handleSubmit(e)} />
+            <input type="submit" className="btn-submit" value="Submit" onClick={this.handleSubmit} />
           </form>
         </div>
         <Cards cards={this.state.cards} />        

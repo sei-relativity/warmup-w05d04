@@ -12,13 +12,13 @@ class App extends Component {
 }
 
 
-  handleChange(event){
+  handleChange = (event) =>{
     console.log(event.target.value)
     this.setState({ question: event.target.value })
 
   }
 
-  handleSubmit(event){
+  handleSubmit = (event) => {
     event.preventDefault();
     const question = this.state.question
     const card = this.state.cards
@@ -43,9 +43,9 @@ class App extends Component {
               name="question"
               placeholder="Type a question here!"
               value={this.state.question}
-              onChange={(e) => this.handleChange(e)}
+              onChange={this.handleChange}
                />
-            <input type="submit" className="btn-submit" value="Submit" onClick={(e) => this.handleSubmit(e)} />
+            <input type="submit" className="btn-submit" value="Submit" onClick={this.handleSubmit} />
           </form>
         </div>
         <Cards cards={this.state.cards} />        
